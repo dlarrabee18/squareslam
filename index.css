@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.frame {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    animation: bgCol 5s linear infinite;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    animation: slam 5s linear infinite;
+    position: absolute;
+    
+
+}
+.splash {
+    position: absolute;
+    transform: translate(0,400px);
+    width: 100px;
+    border-bottom: 1px solid red;
+    animation: splashGrowW 5s linear infinite;
+}
+.splash2 {
+    position: absolute;
+    transform: translate(50px,350px);
+    height:  100px;
+    border-right: 1px solid red;
+    animation: splashGrowH 5s linear infinite;
+}
+.splash3 {
+    position: absolute;
+    transform: translate(-50px,350px);
+    height:  100px;
+    border-right: 1px solid red;
+    animation: splashGrowH 5s linear infinite;
+}
+.splash4 {
+    position: absolute;
+    transform: translate(0px,300px);
+    width:  100px;
+    border-bottom: 1px solid red;
+    animation: splashGrowW 5s linear infinite;
+}
+
+@keyframes bgCol {
+    74.9%{
+        background-color: white;
+    }
+    75%{
+        background-color: black;
+    }95%{
+        background-color: black;
+    }100%{background-color: white;}
+    }
+    
+
+@keyframes splashGrowW {
+    0%{
+        opacity: 0;
+    }
+    74.99%{
+        opacity: 0;
+    }
+   75%{
+    opacity: 1;
+    width: 100px;
+   }
+    85%{
+        width: 100vw;
+    }97%{
+        width: 0px;
+        opacity: 1;
+    }100%{
+        width: 100px;
+        opacity: 0;
+    }
+    }
+    @keyframes splashGrowH {
+        0%{
+            opacity: 0;
+        }
+        74.99%{
+            opacity: 0;
+        }
+       75%{
+        opacity: 1;
+         height: 100px;
+        }
+         85%{
+             height: 100vw;
+         }97%{
+             height: 0px;
+             opacity: 1;
+         }100%{
+            opacity: 0;
+             height: 100px;
+         }
+         }
+@keyframes slam {
+    2%{
+        transform: translate(0,-0px);
+    }
+    60%{
+        transform: translate(0,-155px);
+        background-color: black;
+    }
+    70%{
+        transform: translate(0,-185px);
+    }
+    75% {
+        background-color: red;
+        transform: translate(0,350px) rotate(720deg);
+    }/*76%{
+        background-color: red;
+        transform: translate(0,350px) rotate(720deg);}
+        80%
+    {
+        background-color: red;
+        transform: translate(0,310px)rotate(480deg);
+    }99%{
+        transform: translate(0,300px)rotate(360deg);
+    }*/95%{ transform: translate(0,350px) rotate(720deg);
+    }100%{
+        transform: translate(0,-0px) rotate(0deg);
+    }
+}
